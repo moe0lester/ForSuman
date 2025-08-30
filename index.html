@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love 💙</title>
+ <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive;
+      background: linear-gradient(to bottom right, #cce7ff, #e6f7ff);
+      text-align: center;
+    }
+    h1 {
+      color: #004080;
+      padding: 20px;
+      font-size: 2.5em;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .item {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+    .item:hover {
+      transform: scale(1.05);
+    }
+    .item img, .item video {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .item p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #0059b3;
+    }
+    .note {
+      margin: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      font-size: 1.3em;
+      color: #004080;
+    }
+  </style>
+</head>
+<body>
+<!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="music/music.mp3.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Cute Play Button -->
+<button id="music-btn" onclick="toggleMusic()" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: pink;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+">
+  🎵 Play Music
+</button>
+  <h1>💙 My Favorite Memories with You 💙</h1>
+
+  <!-- 📸 Photos + 🎥 Videos -->
+  <div class="gallery">
+    <!-- 17 Photos -->
+    <div class="item"><img src="photos/1.jpg.jpg"><p>you alwatys belong to me 💖</p></div>
+    <div class="item"><img src="photos/2.jpg.jpg"><p>You look like my wife ✨</p></div>
+    <div class="item"><img src="photos/3.jpg.jpg"><p>I can’t stop staring at this one 😍</p></div>
+    <div class="item"><img src="photos/4.jpg.jpg"><p>My heart beats faster every time I see this 💓</p></div>
+    <div class="item"><img src="photos/5.jpg.jpg"><p>You mean the world to me 🌍</p></div>
+    <div class="item"><img src="photos/6.jpg.jpg"><p>You Look so pretty here  🌸</p></div>
+    <div class="item"><img src="photos/7.jpg.jpg"><p>This lady is forever mine  💕</p></div>
+    <div class="item"><img src="photos/8.jpg.jpg"><p>I’ll never forget this pretty lady 💫</p></div>
+    <div class="item"><img src="photos/9.jpg.jpg"><p> I love you so much 💝</p></div>
+    <div class="item"><img src="photos/10.jpg.jpg"><p>wish i could actually meet you and kiss you😍 </p></div>
+    <div class="item"><img src="photos/11.jpg.jpg"><p>My perfect Girl 🌹</p></div>
+    <div class="item"><img src="photos/12.jpg.jpg"><p>I want to be with you forever ✨</p></div>
+    <div class="item"><img src="photos/13.jpg.jpg"><p>This picture is my safe place 🏡</p></div>
+    <div class="item"><img src="photos/14.jpg.jpg"><p>You are my favorite person 💖</p></div>
+    <div class="item"><img src="photos/15.jpg.jpg"><p>I love you so much  💕</p></div>
+    <div class="item"><img src="photos/16.jpg.jpg"><p>Looks drunk but still mine </p></div>
+    <div class="item"><img src="photos/17.jpg.jpg"><p>I’ll cherish your photos  forever 💎</p></div>
+    <div class="item"><img src="photos/18.jpg.jpg"><p>You will be missed by me every second🫶</p></div>
+    <div class="item"><img src="photos/19.jpg.jpg"><p>The photos in blue means a lot to me❤️</p></div>
+    <div class="item"><img src="photos/20.jpg.jpg"><p>You mean soo much to me💗</p></div>
+<div class="item">
+  <img src="photos/21.jpg">
+  <p>You are always in my mind💖</p>
+</div>
+
+<div class="item">
+  <img src="photos/22.jpg">
+  <p>Where are you looking huh😒</p>
+</div>
+
+<div class="item">
+  <img src="photos/23.jpg">
+  <p>I hope you won't forget me😔</p>
+</div>
+
+<div class="item">
+  <img src="photos/24.jpg">
+  <p>You are my Girlfriend always🫶</p>
+</div>
+
+<div class="item">
+  <img src="photos/25.jpg">
+  <p>I want you to be happy always😊<p>
+</div>
+
+<div class="item">
+  <img src="photos/26.jpg">
+  <p>I love you the wy you are🫶</p>
+</div>
+
+<div class="item">
+  <img src="photos/27.jpg">
+  <p>I do love you okay😘</p>
+</div>
+
+<div class="item">
+  <img src="photos/28.jpg">
+  <p>Eat well you are getting thin😒</p>
+</div>
+
+<div class="item">
+  <img src="photos/29.jpg">
+  <p>This is my wife😘</p>
+</div>
+
+<div class="item">
+  <img src="photos/30.jpg">
+  <p>My Angel baby💕</p>
+</div>
+
+<div class="item">
+  <img src="photos/31.jpg">
+  <p>I miss my bae😔</p>
+</div>
+
+<div class="item">
+  <img src="photos/32.jpg">
+  <p>I am soo much in love 😍</p>
+</div>
+
+<div class="item">
+  <img src="photos/33.jpg">
+  <p>You are My babyyyyyyy🥰</p>
+</div>
+
+<div class="item">
+  <img src="photos/34.jpg">
+  <p>Awwww Thats my beautiful bae😍🥰</p>
+</div>
+
+<div class="item">
+  <img src="photos/35.jpg">
+  <p>I Only care bout my bae😁</p>
+</div>
+
+<div class="item">
+  <img src="photos/36.jpg">
+  <p>My babe Looks soo pretty here😍</p>
+</div>
+
+<div class="item">
+  <img src="photos/37.jpg">
+  <p>Tum Meri ho Humesha 💗</p>
+</div>
+
+<div class="item">
+  <img src="photos/38.jpg">
+  <p>My lovely Daisy🫶</p>
+</div>
+
+<div class="item">
+  <img src="photos/39.jpg">
+  <p>Muah😘😘😘</p>
+</div>
+
+<div class="item">
+  <img src="photos/40.jpg">
+  <p>I love your bakbak😊</p>
+</div>
+
+<div class="item">
+  <img src="photos/41.jpg">
+  <p>Everything about you is perfect baby💘</p>
+</div>
+
+<div class="item">
+  <img src="photos/42.jpg">
+  <p>You are Mine💗</p>
+</div>
+
+<div class="item">
+  <img src="photos/43.jpg">
+  <p>My baby 😘</p>
+</div>
+
+<div class="item">
+  <img src="photos/44.jpg">
+  <p>You are my baby💕</p>
+</div>
+
+<div class="item">
+  <img src="photos/45.jpg">
+  <p>My love is always there for you❤️‍🩹</p>
+</div>
+
+<div class="item">
+  <img src="photos/46.jpg">
+  <p>You are the sunshine😘</p>
+</div>
+
+<div class="item">
+  <img src="photos/47.jpg">
+  <p>You are the prettiest girl for me💗</p>
+</div>
+
+<div class="item">
+  <img src="photos/48.jpg">
+  <p>wanted to spend my whole life with you❤️‍🩹</p>
+</div>
+
+<div class="item">
+  <img src="photos/49.jpg">
+  <p>Loved you with all my heart🫶</p>
+</div>
+
+<div class="item">
+  <img src="photos/50.jpg">
+  <p>I won't forget u ever 🥹</p>
+</div>
+    <!-- 2 Videos -->
+    <div class="item">
+      <video controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <p>This video makes me smile every time 💕</p>
+    </div>
+
+    <div class="item">
+      <video controls>
+        <source src="videos/video2.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <p>will be forever in my heart 💖</p>
+    </div>
+  </div>
+
+  <!-- 💌 Final Note -->
+  <div class="note">
+    My love, these memories are treasures I’ll keep forever.  
+    Every picture, every video, every moment of  you is priceless.  
+    You are my joy, my peace, my dream, and my forever.
+    I'll love you always even though we are not together anymore.💙 
+    And I'am sorry for hurting you everytime. Love You ❤️ 
+  </div>
+<script>
+const music = document.getElementById('bg-music');
+const btn = document.getElementById('music-btn');
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    btn.textContent = "🔊 Pause Music";
+  } else {
+    music.pause();
+    btn.textContent = "🎵 Play Music";
+  }
+}
+
+// Optional: Start music on first touch anywhere (mobile-friendly)
+document.body.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    btn.textContent = "🔊 Pause Music";
+  }
+}, { once: true });
+</script>
+</body>
+</html>

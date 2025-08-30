@@ -1,0 +1,173 @@
+/* 🌸 Romantic Cute Theme - Light Blue with Floating Hearts */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* bigger cards */
+  gap: 25px;   /* more space between items */
+  margin-top: 30px;
+}
+
+.item {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.item:hover {
+  transform: scale(1.05); /* gentle zoom effect on hover */
+}
+
+.item img,
+.item video {
+  width: 100%;
+  height: 320px;       /* bigger height */
+  object-fit: cover;   /* crop nicely */
+  border-bottom: 2px solid #b3e5fc;
+}
+
+.note {
+  padding: 12px;
+  font-size: 14px;
+  background: #f0faff;
+  color: #444;
+}
+
+/* Big Note at the End */
+.big-note {
+  background: #ffffff;
+  padding: 40px;
+  margin: 60px auto;
+  border-radius: 25px;
+  max-width: 900px;     /* wider */
+  min-height: 250px;    /* taller */
+  text-align: center;
+  font-size: 1.6rem;    /* bigger text */
+  line-height: 1.9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 3px dashed #81d4fa; /* cute dashed border */
+  color: #01579b;
+}
+.big-note::before {
+  content: "💙💌💙";   /* little cute icons above note */
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* 💖 Floating Hearts Layer */
+#hearts {
+  position: fixed;
+  inset: 0;            /* top:0; right:0; bottom:0; left:0 */
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;          /* stay behind content */
+}
+
+/* Heart Shape */
+.heart {
+  position: absolute;
+  width: var(--size, 16px);
+  height: var(--size, 16px);
+  background: #ff6b9a;
+  transform: rotate(45deg);
+  border-radius: 4px;
+  opacity: 0.8;
+  will-change: transform, opacity;
+  animation: floatUp linear forwards;
+  box-shadow: 0 6px 16px rgba(255, 107, 154, 0.45);
+}
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+.heart::before { left: -50%; }
+.heart::after  { top: -50%; }
+
+/* Floating Motion */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(45deg) scale(0.8);
+    opacity: 0;
+  }
+  10% { opacity: 0.9; }
+  90% { opacity: 0.9; }
+  100% {
+    transform: translateY(-110vh) rotate(45deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  #hearts { display: none; }
+}
+
+/* Music Button */
+#play-music {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: pink;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 2; /* above hearts */
+}
+
+#play-music:hover {
+  background-color: hotpink;
+  transform: scale(1.1);
+}.cute-btn {
+    position: fixed;      /* Float above content */
+    top: 20px;
+    right: 20px;
+    background: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.cute-btn:hover {
+    background: #ff4757;
+    transform: scale(1.1);
+}
+
+.cute-btn:active {
+    transform: scale(0.95);
+}
